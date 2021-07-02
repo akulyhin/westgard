@@ -4,20 +4,26 @@ import debounce from 'lodash.debounce';
 
 const search = document.getElementById('search');
 const content = document.querySelector('.content');
-const contentBox = document.querySelectorAll('.content-item');
-const newContent = document.querySelector('.new-content');
+const contentBox = document.querySelectorAll('.content .content-item');
+const allContent = document.querySelectorAll('.content .content-item');
 
 let contentArr = [];
 
+
 search.addEventListener('input', debounce((e) => {
 
-    if (e.target.value.length >= 3) {
+    if (e.target.value.length > 2) {
         searchQuery(e.target.value.toLowerCase());
     }
 
     else if (e.target.value === '') {
-        content.style.display = 'flex';
-        newContent.style.display = 'none';
+        content.innerHTML = '';
+
+        allContent.forEach(item => {
+            console.log(item);
+            content.appendChild(item);
+        })
+    
     }
 }, 300))
 
@@ -25,31 +31,28 @@ search.addEventListener('input', debounce((e) => {
 function searchQuery(query) {
 
     contentBox.forEach(item => {
-
-
         if (item.children[0].children[0].innerText.toLowerCase().indexOf(query) !== -1) {
+            contentArr = [];
             contentArr.push(item);
+    
         }
     })
 
-
     if (contentArr[0]) {
-        const resBlock = contentArr[0];
-        content.style.display = 'none';
-        newContent.style.display = 'flex';
+        let resBlock = contentArr[0];
     
-        newContent.innerHTML = '';
+        content.innerHTML = '';
 
-        const appendBlock = resBlock.cloneNode(true);
+        console.log('resBlock', contentArr[0])
+
         
-        newContent.append(appendBlock);
+        content.appendChild(resBlock);
+
     }
 
     else {
-        content.style.display = 'none';
-        newContent.style.display = 'flex';
 
-        newContent.innerHTML = 'Нихера не найдено!';
+        content.innerHTML = 'Нихера не найдено!';
     }
 }
 
