@@ -48,14 +48,15 @@ img {
   margin-top: 50px;
 }
 
-.content-item {
+.content-box {
   padding: 30px 10px;
   border-radius: 8px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
   transition: all .3s ease;
+  margin-bottom: 25px;
 }
 
-.content-item:hover {
+.content-box:hover {
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, .15);
 }
 
