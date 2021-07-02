@@ -30,9 +30,11 @@ search.addEventListener('input', debounce((e) => {
 
 function searchQuery(query) {
 
+    contentArr = [];
+
     contentBox.forEach(item => {
         if (item.children[0].children[0].innerText.toLowerCase().indexOf(query) !== -1) {
-            contentArr = [];
+
             contentArr.push(item);
     
         }
@@ -52,7 +54,7 @@ function searchQuery(query) {
 
     else {
 
-        content.innerHTML = 'Нихера не найдено!';
+        content.innerHTML = 'Нифига не найдено! Попробуйте сменить запрос!';
     }
 }
 
