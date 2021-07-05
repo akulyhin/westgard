@@ -20,10 +20,8 @@ search.addEventListener('input', debounce((e) => {
         content.innerHTML = '';
 
         allContent.forEach(item => {
-            console.log(item);
             content.appendChild(item);
-        })
-    
+        })  
     }
 }, 300))
 
@@ -34,9 +32,7 @@ function searchQuery(query) {
 
     contentBox.forEach(item => {
         if (item.children[0].children[0].innerText.toLowerCase().indexOf(query) !== -1) {
-
             contentArr.push(item);
-    
         }
     })
 
@@ -44,10 +40,6 @@ function searchQuery(query) {
         let resBlock = contentArr[0];
     
         content.innerHTML = '';
-
-        console.log('resBlock', contentArr[0])
-
-        
         content.appendChild(resBlock);
 
     }
