@@ -37,15 +37,13 @@ function searchQuery(query) {
     })
 
     if (contentArr[0]) {
-        let resBlock = contentArr[0];
+        let resBlock = contentArr;
     
         content.innerHTML = '';
-        content.appendChild(resBlock);
-
+        content.append(...resBlock);
     }
 
     else {
-
         content.innerHTML = 'Нифига не найдено! Попробуйте сменить запрос!';
     }
 }
