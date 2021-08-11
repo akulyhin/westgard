@@ -25,55 +25,163 @@
   <body>
 
     <header>
-      <div class="container">
+      <div class="menu-btn">
+        <i class="far fa-caret-square-left"></i>
+        <i class="far fa-caret-square-right" style="display: none;"></i>
+      </div>
+    
+      <div class="header">
+    
         <div class="logo">
-          <img src="./images/logo.png" alt="">
+          <a href="/">
+            <img src="./images/eplace-white.png" alt="logo eplace">
+          </a>
         </div>
-    </div>
+    
+        <div class="search-block">
+          <input type="search" class="form-control" name="search" id="search" placeholder="Поиск">
+        </div>
+    
+        <ul class="right-btn">
+          <li data-toggle="tooltip" data-placement="bottom" data-title="Служба поддержки">
+            <button type="button" class="support-button" data-toggle="modal" data-target="#supportModal">
+              <i class="fas fa-headset"></i>
+            </button>
+          </li>
+        </ul>
+    
+      </div>
     </header>
 
     <main>
-      <div class="container">
+    
+    <div class="body-pane">
+      <div class="navbar-left">
+        <ul class="menu">
+    
+          <li class="active">
+            <a href="/#" data-search="">
+              <i class="far fa-address-card"></i>
+              <span>Общая информация</span>
+            </a>
+          </li>
+    
+          <li class="">
+            <a href="/#" data-search="Товары и категории">
+              <i class="fab fa-product-hunt"></i>
+              <span>Товары и категории</span> 
+            </a>
+          </li>
+          
+          <li class="">
+            <a href="/#" data-search="Дизайн и главная страница">
+              <i class="fas fa-vest-patches"></i>
+              <span>Дизайн и главная</span> 
+            </a>
+          </li>
 
-        <h1>Информация по сайту:</h1>
+          <li class="">
+            <a href="/#" data-search="Контент">
+              <i class="fas fa-pencil-alt"></i>
+              <span>Контент</span> 
+            </a>
+          </li>
+    
+    
+        </ul>
+      </div>
+    
+      <div class="main-pane">
+        
+        <h1>Документация по сайту Westgard:</h1>
+    
+            
+    
+            <div class="row content">
+    
+              <div class="col-md-4 content-item">
+                <div class="content-box">
+                  <h2 class="title-video">Как добавлять товары и категории:</h2>
+                  <span class="tags">Товары и категории</span>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/QpNVxuzjmGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
+    
+              <div class="col-md-4 content-item">
+                <div class="content-box">
+                  <h2 class="title-video">Как редактировать дизайн и главную страницу:</h2>
+                  <span class="tags">Дизайн и главная страница</span>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/bQGiVTj9xF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
 
-        <input type="search" class="form-control mt-3" name="search" id="search" placeholder="Начните вводить, чтобы найти информацию...">
+              <div class="col-md-4 content-item">
+                <div class="content-box">
+                  <h2 class="title-video">Видеопрезентация сайта WestGard.com.ua:</h2>
+                  <span class="tags">Контент</span>
+                  <span class="tags">Запись zoom</span>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/mxgSbXMqMK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
+              
+              <div class="col-md-4 content-item">
+                <div class="content-box">
+                  <h2 class="title-video">Как добавлять контент (текст):</h2>
+                  <span class="tags">Контент</span>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/bwli-dzg6Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
 
-        <div class="row content">
-
-          <div class="col-md-4 content-item">
-            <div class="content-box">
-              <h2 class="title-video">Как добавлять товары и категории:</h2>
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/QpNVxuzjmGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="content-box">
-              <h2 class="title-video">Как редактировать дизайн и главную страницу:</h2>
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/bQGiVTj9xF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="content-box">
-              <h2 class="title-video">Видеопрезентация сайта WestGard.com.ua:</h2>
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/mxgSbXMqMK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="content-box">
-              <h2 class="title-video">Как добавлять контент (текст):</h2>
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/bwli-dzg6Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          </div>
-
+              <div class="col-md-4 content-item">
+                <div class="content-box">
+                  <h2 class="title-video">Массовое редактирование товаров:</h2>
+                  <span class="tags">Контент</span>
+                  <span class="tags">Запись zoom</span>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/PlkXi3d3mps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
+    
+            </div>
+    
+    
+            <div class="row new-content mt-5" style="display: none"></div>
         </div>
-
-
-        <div class="row new-content mt-5" style="display: none"></div>
+        </main>
+    
+    
+    
+      </div>
     </div>
+    
+    
+    
+    <!-- Модальное окно -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body messenger-block">
+              <h2 class="title_h2">Выберите свой мессенджер</h2>
+                  <ul class="messenger_list">
+                      <li class="messenger_item"><a href="https://t.me/eplaceUA_bot" class="messenger_link telegram btn btn-primary" target="_blank">
+                          <i class="fab fa-telegram-plane"></i> Telegram</a>
+                      </li>
+    
+                      <li class="messenger_item"><a href="viber://pa?chatURI=eplace" class="messenger_link viber btn btn-primary" target="_blank">
+                          <i class="fab fa-viber"></i> Viber</a>
+                      </li>
+                  </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
     </main>
    
 
