@@ -69,7 +69,7 @@ menuItems.forEach(item => {
             }
             
             else {
-                setLocation('/');
+                setLocation('/westgard/');
                 document.querySelector('h1').textContent = '';
             }
         }
@@ -82,7 +82,7 @@ menuItems.forEach(item => {
                 setLocation(`?search=${e.target.parentElement.getAttribute('data-search').replace(/ /g, '_')}`);
             }
             else {
-                setLocation('/');
+                setLocation('/westgard/');
                 document.querySelector('h1').textContent = '';
             }
         }
